@@ -12,6 +12,7 @@
       padding: 0;
       box-sizing: border-box;
     }
+
     body {
       font-family: 'Helvetica', Arial, sans-serif;
       line-height: 1.6;
@@ -19,6 +20,7 @@
       background-size: cover;
       color: var(--text-color);
     }
+
     :root {
       /* Light theme colors */
       --background-color: #f4f4f4;
@@ -32,6 +34,7 @@
       --gallery-border: #ccc;
       --footer-background: #fff;
     }
+
     @media (prefers-color-scheme: dark) {
       :root {
         /* Dark theme colors */
@@ -47,38 +50,45 @@
         --footer-background: #1e1e1e;
       }
     }
+
     header {
       background-color: var(--header-background);
       padding: 20px;
       border-bottom: 1px solid var(--border-color);
     }
+
     header h1 {
       text-align: center;
       margin-bottom: 10px;
     }
-    /* Removed subtitle from the header */
+
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
     }
+
     nav ul li {
       margin: 0 15px;
     }
+
     nav ul li a {
       text-decoration: none;
       color: var(--link-color);
       font-weight: bold;
     }
+
     .container {
       width: 90%;
       max-width: 1000px;
       margin: 20px auto;
     }
+
     /* Blog Section */
-    #Whats-New { /* Updated id if needed in navigation */
+    #Whats-New { 
       margin-bottom: 50px;
     }
+
     /* Style for the welcome message */
     #Whats-New .welcome {
       text-align: center;
@@ -86,6 +96,7 @@
       margin-bottom: 10px;
       color: var(--text-color);
     }
+
     /* Subtitle for the blog section */
     #Whats-New .subtitle {
       text-align: center;
@@ -93,9 +104,7 @@
       font-size: 1.3em;
       color: var(--text-color);
     }
-    #blog {
-      margin-bottom: 50px;
-    }
+
     article.post {
       background-color: var(--post-background);
       padding: 20px;
@@ -104,20 +113,24 @@
       border-radius: 4px;
       box-shadow: 0 2px 3px var(--post-box-shadow);
     }
+
     article.post h2 {
       margin-bottom: 10px;
       font-size: 1.8em;
       color: var(--text-color);
     }
+
     article.post .date {
       font-size: 0.9em;
       color: #888;
       margin-bottom: 15px;
     }
+
     article.post p {
       margin-bottom: 15px;
       text-align: justify;
     }
+
     /* Gallery Section */
     #gallery {
       background-color: var(--gallery-background);
@@ -127,22 +140,26 @@
       box-shadow: 0 2px 3px var(--post-box-shadow);
       margin-bottom: 50px;
     }
+
     #gallery h2 {
       margin-bottom: 15px;
       text-align: center;
     }
+
     .gallery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
+
     .gallery-grid img {
       width: calc(25% - 10px);
       border: 1px solid var(--gallery-border);
       border-radius: 4px;
       object-fit: cover;
     }
+
     /* Footer */
     footer {
       background-color: var(--footer-background);
@@ -150,17 +167,20 @@
       text-align: center;
       border-top: 1px solid var(--border-color);
     }
+
     footer a {
       color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
     }
+
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .gallery-grid img {
         width: calc(50% - 10px);
       }
     }
+
     @media (max-width: 480px) {
       nav ul {
         flex-direction: column;
@@ -169,6 +189,13 @@
       .gallery-grid img {
         width: 100%;
       }
+    }
+    
+    /* Flex container for centering the Tenor embed */
+    .gif-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
     }
   </style>
 </head>
@@ -195,8 +222,8 @@
         I hope you enjoy exploring the latest in tech and cybersecurity!</h3>
       <h3 class="welcome">Remember, have fun, stay safe, and stay ethical</h3>
       
-      <!-- Tenor GIF Embed Code centered and with a smaller width -->
-      <div style="text-align: center;">
+      <!-- Tenor GIF Embed Code centered using Flexbox -->
+      <div class="gif-container">
         <div class="tenor-gif-embed" data-postid="4950585" data-share-method="host" data-aspect-ratio="1.33333" data-width="300px">
           <a href="https://tenor.com/view/awesome-computer-kid-computer-thumbs-up-alright-kid-gif-4950585">
             Awesome Computer Kid Computer GIF
