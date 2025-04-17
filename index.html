@@ -69,23 +69,37 @@
       color: var(--link-color);
       font-weight: bold;
     }
-    /* Parallax Section */
-    .parallax {
-      background-image: url('Images/aigen3.jpg');  /* Replace with your image */
-      height: 400px; 
-      background-attachment: fixed;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
+    /* Parallax Video Section */
+    .parallax-video {
       position: relative;
+      overflow: hidden;
+      height: 400px; /* Adjust the height as desired */
+    }
+    .parallax-video video {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+      z-index: -1;
+    }
+    .parallax-content {
+      position: relative;
+      z-index: 1;
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-    .parallax h2 {
+      height: 100%;
+      text-align: center;
       color: #fff;
+    }
+    .parallax-content h2 {
       font-size: 2.5em;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
     }
     .container {
       width: 90%;
@@ -195,7 +209,6 @@
     <h1>Decoding the Web</h1>
     <nav>
       <ul>
-        <!-- Updated anchor link if needed -->
         <li><a href="#weeklyfacts">What's New</a></li>
         <li><a href="introduction.html">Who Am I?</a></li>
         <li><a href="linux-distros.html">Linux Distributions</a></li>
@@ -205,12 +218,18 @@
       </ul>
     </nav>
   </header>
-
-  <!-- Parallax Section -->
-  <section class="parallax">
-    <h2>Welcome to Decoding the Web</h2>
+  
+  <!-- Parallax Video Section -->
+  <section class="parallax-video">
+    <video autoplay muted loop playsinline>
+      <source src="Images/parallax-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="parallax-content">
+      <h2>Welcome to Decoding the Web</h2>
+    </div>
   </section>
-
+  
   <div class="container">
     <!-- Blog Section -->
     <section id="Whats-New">
@@ -245,7 +264,7 @@
           I strongly recommend upgrading your network whenever possible, as older devices can become vulnerable over time.
         </p>
       </article>
-
+      
       <article class="post">
         <h2>Zero-Day</h2>
         <p class="date">Posted on April 17, 2025</p>
@@ -256,7 +275,7 @@
           To protect yourself from such vulnerabilities, ensure that your devices are updated frequently, use strong and unique passwords with a password manager, and avoid clicking on suspicious links.
         </p>
       </article>
-
+      
       <article class="post">
         <h2>RFID and NFC blocking</h2>
         <p class="date">Posted on April 17, 2025</p>
@@ -265,13 +284,13 @@
           to another device. This lets attackers clone your key as if it was an exact duplicate so they can gain access to your vehical.
           However you can block this signal from transmitting into the air by using an RFID blocking case.
           <br><br>
-          Just about everyone owns a debit or credit card. In most cases these cards have a chip in that uses NFC (Near Field Communication).
+          Just about everyone owns a debit or credit card. In most cases these cards have a chip in that uses NFC (Near Field Communication)
           This signal also constantly produces this signal. Attackers can use the same attack method and clone a card or anything that uses NFC
-          to duplicate your card for illicit use. You can prevent this by using an NFC blocking wallet.
+          to duplicate your card for say and use it as they will. You can prevent this by using an NFC blocking wallet.
         </p>
       </article>
     </section>
-
+    
     <!-- Image Gallery -->
     <section id="gallery">
       <h2>Image Gallery</h2>
@@ -283,7 +302,7 @@
       </div>
     </section>
   </div>
-
+  
   <!-- Footer with contact information -->
   <footer id="contact">
     <p>&copy; 2025 Decoding the Web | All Rights Reserved</p>
