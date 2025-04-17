@@ -62,12 +62,7 @@
       margin-bottom: 10px;
     }
     
-    header p {
-      text-align: center;
-      margin-bottom: 15px;
-      font-size: 1.1em; /* Adjust size as needed */
-      color: var(--text-color);
-    }
+    /* Removed subtitle from the header */
 
     nav ul {
       display: flex;
@@ -92,7 +87,19 @@
     }
 
     /* Blog Section */
-    #Whats-New {
+    #Whats-New { /* Updated id if needed in navigation */
+      margin-bottom: 50px;
+    }
+
+    /* Subtitle for the blog section */
+    #blog .subtitle {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 1.3em;
+      color: var(--text-color);
+    }
+
+    #blog {
       margin-bottom: 50px;
     }
 
@@ -186,8 +193,6 @@
 <body>
   <header>
     <h1>Decoding the Web</h1>
-    <!-- Subtitle Added Here -->
-    <p>Weekly Facts and Info</p>
     <nav>
       <ul>
         <li><a href="#Whats-New">What's New</a></li>
@@ -203,6 +208,9 @@
   <div class="container">
     <!-- Blog Section -->
     <section id="blog">
+      <!-- Inserted Subtitle Above the Wi-Fi post -->
+      <h3 class="subtitle">Weekly Facts and Info</h3>
+      
       <article class="post">
         <h2>Wi-Fi</h2>
         <p class="date">Posted on April 17, 2025</p>
