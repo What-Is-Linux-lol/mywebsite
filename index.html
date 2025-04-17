@@ -12,7 +12,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Helvetica', Arial, sans-serif;
       line-height: 1.6;
@@ -20,7 +19,6 @@
       background-size: cover;
       color: var(--text-color);
     }
-
     :root {
       /* Light theme colors */
       --background-color: #f4f4f4;
@@ -34,7 +32,6 @@
       --gallery-border: #ccc;
       --footer-background: #fff;
     }
-
     @media (prefers-color-scheme: dark) {
       :root {
         /* Dark theme colors */
@@ -50,45 +47,37 @@
         --footer-background: #1e1e1e;
       }
     }
-
     header {
       background-color: var(--header-background);
       padding: 20px;
       border-bottom: 1px solid var(--border-color);
     }
-
     header h1 {
       text-align: center;
       margin-bottom: 10px;
     }
-
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
     }
-
     nav ul li {
       margin: 0 15px;
     }
-
     nav ul li a {
       text-decoration: none;
       color: var(--link-color);
       font-weight: bold;
     }
-
     .container {
       width: 90%;
       max-width: 1000px;
       margin: 20px auto;
     }
-
     /* Blog Section */
-    #Whats-New { 
+    #Whats-New { /* Updated id if needed in navigation */
       margin-bottom: 50px;
     }
-
     /* Style for the welcome message */
     #Whats-New .welcome {
       text-align: center;
@@ -96,7 +85,6 @@
       margin-bottom: 10px;
       color: var(--text-color);
     }
-
     /* Subtitle for the blog section */
     #Whats-New .subtitle {
       text-align: center;
@@ -104,7 +92,6 @@
       font-size: 1.3em;
       color: var(--text-color);
     }
-
     article.post {
       background-color: var(--post-background);
       padding: 20px;
@@ -113,24 +100,20 @@
       border-radius: 4px;
       box-shadow: 0 2px 3px var(--post-box-shadow);
     }
-
     article.post h2 {
       margin-bottom: 10px;
       font-size: 1.8em;
       color: var(--text-color);
     }
-
     article.post .date {
       font-size: 0.9em;
       color: #888;
       margin-bottom: 15px;
     }
-
     article.post p {
       margin-bottom: 15px;
       text-align: justify;
     }
-
     /* Gallery Section */
     #gallery {
       background-color: var(--gallery-background);
@@ -140,26 +123,22 @@
       box-shadow: 0 2px 3px var(--post-box-shadow);
       margin-bottom: 50px;
     }
-
     #gallery h2 {
       margin-bottom: 15px;
       text-align: center;
     }
-
     .gallery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
-
     .gallery-grid img {
       width: calc(25% - 10px);
       border: 1px solid var(--gallery-border);
       border-radius: 4px;
       object-fit: cover;
     }
-
     /* Footer */
     footer {
       background-color: var(--footer-background);
@@ -167,20 +146,17 @@
       text-align: center;
       border-top: 1px solid var(--border-color);
     }
-
     footer a {
       color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
     }
-
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .gallery-grid img {
         width: calc(50% - 10px);
       }
     }
-
     @media (max-width: 480px) {
       nav ul {
         flex-direction: column;
@@ -190,12 +166,11 @@
         width: 100%;
       }
     }
-    
     /* Flex container for centering the Tenor embed */
     .gif-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 20px;
+      margin-bottom: 40px; /* Increased bottom margin for extra space */
     }
   </style>
 </head>
@@ -218,7 +193,7 @@
     <!-- Blog Section -->
     <section id="Whats-New">
       <!-- Welcome Messages -->
-      <h3 class="welcome">Welcome, everyone! I am so glad you're here. 
+      <h3 class="welcome">Welcome, everyone! I am so glad you're here.
         I hope you enjoy exploring the latest in tech and cybersecurity!</h3>
       <h3 class="welcome">Remember, have fun, stay safe, and stay ethical</h3>
       
@@ -243,7 +218,7 @@
         <p class="date">Posted on April 17, 2025</p>
         <p>
           The network industry is pushing for new and improved standards in Wi-Fi technology.
-          You’ve probably heard of “Wi-Fi 7” which is based on the IEEE 802.11be standard.
+          You’ve probably heard of “Wi-Fi 7,” which is based on the IEEE 802.11be standard.
           This new generation offers higher throughput and enhanced encryption, ensuring faster speeds and increased security.
           I strongly recommend upgrading your network whenever possible, as older devices can become vulnerable over time.
         </p>
