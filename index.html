@@ -12,7 +12,6 @@
       padding: 0;
       box-sizing: border-box;
     }
-
     body {
       font-family: 'Helvetica', Arial, sans-serif;
       line-height: 1.6;
@@ -20,7 +19,6 @@
       background-size: cover;
       color: var(--text-color);
     }
-
     :root {
       /* Light theme colors */
       --background-color: #f4f4f4;
@@ -34,7 +32,6 @@
       --gallery-border: #ccc;
       --footer-background: #fff;
     }
-
     @media (prefers-color-scheme: dark) {
       :root {
         /* Dark theme colors */
@@ -50,62 +47,67 @@
         --footer-background: #1e1e1e;
       }
     }
-
     header {
       background-color: var(--header-background);
       padding: 20px;
       border-bottom: 1px solid var(--border-color);
     }
-
     header h1 {
       text-align: center;
       margin-bottom: 10px;
     }
-    
     nav ul {
       display: flex;
       justify-content: center;
       list-style: none;
     }
-
     nav ul li {
       margin: 0 15px;
     }
-
     nav ul li a {
       text-decoration: none;
       color: var(--link-color);
       font-weight: bold;
     }
-
+    /* Parallax Section */
+    .parallax {
+      background-image: url('Images/parallax-bg.jpg');  /* Replace with your image */
+      height: 400px; 
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .parallax h2 {
+      color: #fff;
+      font-size: 2.5em;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+    }
     .container {
       width: 90%;
       max-width: 1000px;
       margin: 20px auto;
     }
-
     /* Blog Section */
-    #Whats-New { /* Section id can remain for overall styling if needed */
+    #Whats-New {
       margin-bottom: 50px;
     }
-
-    /* Style for the welcome messages */
     #Whats-New .welcome {
       text-align: center;
       font-size: 1.4em;
       margin-bottom: 10px;
       color: var(--text-color);
     }
-
-    /* Subtitle for the blog section; now with an id for anchoring */
-    <!-- Note: We add an id to the heading for scrolling -->
-    #weeklyfacts {
+    #Whats-New .subtitle {
       text-align: center;
       margin-bottom: 25px;
       font-size: 1.3em;
       color: var(--text-color);
     }
-
     article.post {
       background-color: var(--post-background);
       padding: 20px;
@@ -114,24 +116,20 @@
       border-radius: 4px;
       box-shadow: 0 2px 3px var(--post-box-shadow);
     }
-
     article.post h2 {
       margin-bottom: 10px;
       font-size: 1.8em;
       color: var(--text-color);
     }
-
     article.post .date {
       font-size: 0.9em;
       color: #888;
       margin-bottom: 15px;
     }
-
     article.post p {
       margin-bottom: 15px;
       text-align: justify;
     }
-
     /* Gallery Section */
     #gallery {
       background-color: var(--gallery-background);
@@ -141,26 +139,22 @@
       box-shadow: 0 2px 3px var(--post-box-shadow);
       margin-bottom: 50px;
     }
-
     #gallery h2 {
       margin-bottom: 15px;
       text-align: center;
     }
-
     .gallery-grid {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
       justify-content: center;
     }
-
     .gallery-grid img {
       width: calc(25% - 10px);
       border: 1px solid var(--gallery-border);
       border-radius: 4px;
       object-fit: cover;
     }
-
     /* Footer */
     footer {
       background-color: var(--footer-background);
@@ -168,20 +162,17 @@
       text-align: center;
       border-top: 1px solid var(--border-color);
     }
-
     footer a {
       color: var(--link-color);
       text-decoration: none;
       font-weight: bold;
     }
-
     /* Responsive adjustments */
     @media (max-width: 768px) {
       .gallery-grid img {
         width: calc(50% - 10px);
       }
     }
-
     @media (max-width: 480px) {
       nav ul {
         flex-direction: column;
@@ -191,12 +182,11 @@
         width: 100%;
       }
     }
-
     /* Flex container for centering the Tenor embed */
     .gif-container {
       display: flex;
       justify-content: center;
-      margin-bottom: 40px; /* Space below the GIF */
+      margin-bottom: 40px;
     }
   </style>
 </head>
@@ -205,7 +195,7 @@
     <h1>Decoding the Web</h1>
     <nav>
       <ul>
-        <!-- Updated anchor link to point to the new id "weeklyfacts" -->
+        <!-- Updated anchor link if needed -->
         <li><a href="#weeklyfacts">What's New</a></li>
         <li><a href="introduction.html">Who Am I?</a></li>
         <li><a href="linux-distros.html">Linux Distributions</a></li>
@@ -215,6 +205,11 @@
       </ul>
     </nav>
   </header>
+
+  <!-- Parallax Section -->
+  <section class="parallax">
+    <h2>Welcome to Decoding the Web</h2>
+  </section>
 
   <div class="container">
     <!-- Blog Section -->
@@ -237,7 +232,7 @@
       </div>
       <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
       
-      <!-- "Weekly Facts and Info" heading with an id -->
+      <!-- "Weekly Facts and Info" heading with an id for anchor linking -->
       <h3 id="weeklyfacts" class="subtitle">Weekly Facts and Info</h3>
       
       <article class="post">
@@ -268,11 +263,11 @@
         <p>
           If you have a keyless car, you probably have a key fob that uses RFID, the signal that your fob uses can be coppied and cloned 
           to another device. This lets attackers clone your key as if it was an exact duplicate so they can gain access to your vehical.
-          However you can block this signal from transmitting into the air by using a RFID blocking case.
+          However you can block this signal from transmitting into the air by using an RFID blocking case.
           <br><br>
-          Just about everyone owns a debit or credit card. In most cases these cards have a chip in that uses NFC (Near Field Communication)
+          Just about everyone owns a debit or credit card. In most cases these cards have a chip in that uses NFC (Near Field Communication).
           This signal also constantly produces this signal. Attackers can use the same attack method and clone a card or anything that uses NFC
-          to duplicate your card for say and use it as they will. You can prevent this by using a NFC blocking wallet.
+          to duplicate your card for illicit use. You can prevent this by using an NFC blocking wallet.
         </p>
       </article>
     </section>
