@@ -59,6 +59,11 @@
     text-align: center;
     margin-bottom: 10px;
   }
+  
+  header p {
+    text-align: center;
+    margin-bottom: 15px;
+  }
 
   nav ul {
     display: flex;
@@ -168,10 +173,24 @@
       flex-direction: column;
       gap: 10px;
     }
-
     .gallery-grid img {
       width: 100%;
     }
+  }
+
+  /* New spacing rules for content sections */
+  .container section {
+    margin-bottom: 40px;
+  }
+
+  .container section h2 {
+    margin-bottom: 20px;
+  }
+
+  .container section p,
+  .container section ul,
+  .container section table {
+    margin-bottom: 20px;
   }
   </style>
 </head>
@@ -183,6 +202,7 @@
 
   <div class="container">
     <a href="javascript:history.back()" style="text-decoration: none; color: #0057e7; font-size: 16px;">← Back</a>
+    
     <section>
       <h2>Open Source Software</h2>
       <p>
