@@ -1,82 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact Me</title>
   <style>
+    /* Global Styles */
     body {
       font-family: Arial, sans-serif;
-      margin: 20px;
-      background-color: #f4f4f4;
+      background-color: #121212;
+      color: #e0e0e0;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
     }
     h1 {
-      color: #333;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #f1f1f1;
     }
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #cccccc;
+    }
+    a {
+      color: #0096ff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Contact Form Container */
     .contact-form {
-      background: #fff;
+      background-color: #1e1e1e;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
       max-width: 500px;
       margin: auto;
     }
-    label {
+
+    /* Form Fields */
+    .contact-form label {
       display: block;
-      margin-top: 10px;
+      margin-top: 15px;
       font-weight: bold;
+      color: #e0e0e0;
     }
-    input, textarea {
+    .contact-form input,
+    .contact-form textarea {
       width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ddd;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #444;
       border-radius: 4px;
       font-size: 16px;
+      background-color: #2a2a2a;
+      color: #e0e0e0;
     }
-    button {
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      outline: none;
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Submit Button */
+    .contact-form button {
       background-color: #007BFF;
       color: #fff;
-      padding: 10px 15px;
+      padding: 12px 20px;
       border: none;
       border-radius: 4px;
       cursor: pointer;
       font-size: 16px;
-      margin-top: 15px;
+      margin-top: 20px;
+      width: 100%;
+      transition: background-color 0.3s ease;
     }
-    button:hover {
+    .contact-form button:hover {
       background-color: #0056b3;
     }
-    .success, .error {
+
+    /* Response Messages */
+    .success,
+    .error {
       text-align: center;
-      margin-top: 20px;
       padding: 10px;
       border-radius: 4px;
       max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 20px auto;
+      font-weight: bold;
     }
     .success {
-      background-color: #d4edda;
-      color: #155724;
+      background-color: #28a745;
+      color: #fff;
     }
     .error {
-      background-color: #f8d7da;
-      color: #721c24;
+      background-color: #dc3545;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <h1>Contact Me</h1>
-  <p>If you have any questions, feedback, or would simply like to reach out, please use the form below or email me directly at <a href="mailto:Jtalkstech@proton.me">Jtalkstech@proton.me</a>.</p>
-  
+  <p>
+    If you have any questions, feedback, or would simply like to reach out, please use the form below or email me directly at
+    <a href="mailto:Jtalkstech@proton.me">Jtalkstech@proton.me</a>.
+  </p>
   <div class="contact-form">
     <form id="contactForm" action="https://formspree.io/f/mjkyqbjp" method="POST">
       <label for="name">Your Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
       
       <label for="email">Your Email</label>
-      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required>
+      <input type="email" id="email" name="_replyto" placeholder="Enter your email" required />
       
       <label for="message">Your Message</label>
       <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
@@ -88,9 +128,9 @@
   <div id="formResponse"></div>
   
   <script>
-    // Optional JavaScript to handle the form response without reloading the page.
+    // JavaScript to handle form submission asynchronously
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
+      event.preventDefault();
       
       var form = event.target;
       var formData = new FormData(form);
@@ -109,7 +149,7 @@
           form.reset();
         } else {
           response.json().then(function(data) {
-            if (Object.hasOwn(data, 'errors')) {
+            if (data.hasOwnProperty("errors")) {
               formResponse.innerHTML = '<div class="error">' + data["errors"].map(error => error["message"]).join(", ") + '</div>';
             } else {
               formResponse.innerHTML = '<div class="error">Oops! There was a problem submitting your form</div>';
