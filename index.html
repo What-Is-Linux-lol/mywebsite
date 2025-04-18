@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Decoding the Web</title>
   <link rel="icon" href="Images/favicon.ico" type="image/x-icon">
+  
+  <!-- AOS Library CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
   <style>
     /* Basic Reset */
     * {
@@ -206,8 +210,8 @@
 </head>
 <body>
   <header>
-    <h1>Decoding the Web</h1>
-    <nav>
+    <h1 data-aos="fade-down">Decoding the Web</h1>
+    <nav data-aos="fade-down" data-aos-delay="200">
       <ul>
         <li><a href="#weeklyfacts">What's New</a></li>
         <li><a href="introduction.html">Who Am I?</a></li>
@@ -225,8 +229,8 @@
       <source src="Videos/backgroundgif.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="parallax-content">
-      <h2></h2>
+    <div class="parallax-content" data-aos="fade-in">
+      <h2>Explore the Future</h2>
     </div>
   </section>
   
@@ -234,12 +238,12 @@
     <!-- Blog Section -->
     <section id="Whats-New">
       <!-- Welcome Messages -->
-      <h3 class="welcome">Welcome, everyone! I am so glad you're here.
+      <h3 class="welcome" data-aos="fade-up">Welcome, everyone! I am so glad you're here.
         I hope you enjoy exploring the latest in tech and cybersecurity!</h3>
-      <h3 class="welcome">Remember, have fun, stay safe, and stay ethical</h3>
+      <h3 class="welcome" data-aos="fade-up" data-aos-delay="100">Remember, have fun, stay safe, and stay ethical</h3>
       
       <!-- Tenor GIF Embed Code centered using Flexbox -->
-      <div class="gif-container">
+      <div class="gif-container" data-aos="zoom-in">
         <div class="tenor-gif-embed" data-postid="4950585" data-share-method="host" data-aspect-ratio="1.33333" data-width="300px">
           <a href="https://tenor.com/view/awesome-computer-kid-computer-thumbs-up-alright-kid-gif-4950585">
             Awesome Computer Kid Computer GIF
@@ -252,9 +256,9 @@
       <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
       
       <!-- "Weekly Facts and Info" heading with an id for anchor linking -->
-      <h3 id="weeklyfacts" class="subtitle">Weekly Facts and Info</h3>
+      <h3 id="weeklyfacts" class="subtitle" data-aos="fade-up">Weekly Facts and Info</h3>
       
-      <article class="post">
+      <article class="post" data-aos="fade-up">
         <h2>Wi-Fi</h2>
         <p class="date">Posted on April 17, 2025</p>
         <p>
@@ -265,7 +269,7 @@
         </p>
       </article>
       
-      <article class="post">
+      <article class="post" data-aos="fade-up" data-aos-delay="100">
         <h2>Zero-Day</h2>
         <p class="date">Posted on April 17, 2025</p>
         <p>
@@ -276,36 +280,45 @@
         </p>
       </article>
       
-      <article class="post">
+      <article class="post" data-aos="fade-up" data-aos-delay="200">
         <h2>RFID and NFC blocking</h2>
         <p class="date">Posted on April 17, 2025</p>
         <p>
-          If you have a keyless car, you probably have a key fob that uses RFID, the signal that your fob uses can be coppied and cloned 
-          to another device. This lets attackers clone your key as if it was an exact duplicate so they can gain access to your vehical.
-          However you can block this signal from transmitting into the air by using an RFID blocking case.
+          If you have a keyless car, you probably have a key fob that uses RFID; the signal that your fob uses can be copied and cloned 
+          to another device. This lets attackers clone your key as if it was an exact duplicate so they can gain access to your vehicle.
+          However, you can block this signal from transmitting into the air by using an RFID blocking case.
           <br><br>
-          Just about everyone owns a debit or credit card. In most cases these cards have a chip in that uses NFC (Near Field Communication)
-          This signal also constantly produces this signal. Attackers can use the same attack method and clone a card or anything that uses NFC
-          to duplicate your card for say and use it as they will. You can prevent this by using an NFC blocking wallet.
+          Just about everyone owns a debit or credit card. In most cases these cards have a chip that uses NFC (Near Field Communication).
+          This signal also constantly emits data. Attackers can use the same method and clone a card or any NFC-enabled device.
+          You can prevent this by using an NFC blocking wallet.
         </p>
       </article>
     </section>
     
     <!-- Image Gallery -->
-    <section id="gallery">
+    <section id="gallery" data-aos="fade-up">
       <h2>Image Gallery</h2>
       <div class="gallery-grid">
-        <img src="Images/photo1.jpeg" alt="Scenic landscape view" />
-        <img src="Images/photo2.jpeg" alt="Modern architectural design" />
-        <img src="Images/photo3.jpeg" alt="City skyline at dusk" />
-        <img src="Images/photo4.jpeg" alt="Abstract art composition" />
+        <img src="Images/photo1.jpeg" alt="Scenic landscape view" data-aos="zoom-in" data-aos-delay="50" />
+        <img src="Images/photo2.jpeg" alt="Modern architectural design" data-aos="zoom-in" data-aos-delay="100" />
+        <img src="Images/photo3.jpeg" alt="City skyline at dusk" data-aos="zoom-in" data-aos-delay="150" />
+        <img src="Images/photo4.jpeg" alt="Abstract art composition" data-aos="zoom-in" data-aos-delay="200" />
       </div>
     </section>
   </div>
   
   <!-- Footer with contact information -->
-  <footer id="contact">
+  <footer id="contact" data-aos="fade-in">
     <p>&copy; 2025 Decoding the Web | All Rights Reserved</p>
   </footer>
+  
+  <!-- AOS Library JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 1000,
+    });
+  </script>
 </body>
 </html>
