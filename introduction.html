@@ -85,11 +85,11 @@
     /* Profile Image Styles */
     .profile-image {
       display: block;
-      margin: 20px 0 20px 0px;
+      margin: 20px 0;
       width: 350px;      /* Fixed width */
-      max-width: 100%;   /* Ensures the image won't overflow its container */
-      height: auto;      /* Maintains the aspect ratio */
-      border-radius: 0;  /* Changed to 0 to maintain a rectangular shape */
+      max-width: 100%;   /* Responsive */
+      height: auto;      /* Maintain aspect ratio */
+      border-radius: 0;
       border: 3px solid var(--border-color);
     }
 
@@ -153,6 +153,26 @@
       object-fit: cover;
     }
 
+    /* Donation Section */
+    .donate-section {
+      background-color: var(--post-background);
+      padding: 20px;
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      box-shadow: 0 2px 3px var(--post-box-shadow);
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    .donate-section h3 {
+      margin-bottom: 15px;
+      color: var(--text-color);
+    }
+    
+    .donate-section p {
+      margin-bottom: 20px;
+    }
+
     /* Footer */
     footer {
       background-color: var(--footer-background);
@@ -207,7 +227,7 @@
   <div class="container">
     <a href="javascript:history.back()" style="text-decoration: none; color: #0057e7; font-size: 16px;">← Back</a>
     
-    <!-- Insert Profile Picture -->
+    <!-- Profile Picture -->
     <img src="Images/pictureofme.jpeg" alt="Picture of Nathan Jenkinson" class="profile-image">
     
     <div class="content">
@@ -237,6 +257,21 @@
         <li>When I’m not at my computer, you’ll likely find me exploring nature or enjoying a good science fiction book.</li>
       </ul>
     </div>
+
+    <!-- Donation Section -->
+    <div class="donate-section">
+      <h3>Support My Education and Growth</h3>
+      <p>
+        I'm passionate about learning and sharing valuable information with you. Your donations—big or small—help support my education, enabling me to continue growing and producing more content over the years. Every contribution goes toward resources that enhance my knowledge and creativity. Thank you for being a part of my journey!
+      </p>
+      <form action="https://www.paypal.com/ncp/payment/29N4CZFJX9TXG" method="post" target="_top">
+        <input type="hidden" name="hosted_button_id" value="YOUR_BUTTON_ID" />
+        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" 
+               border="0" name="submit" title="Donate with PayPal" alt="Donate with PayPal button" />
+        <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+      </form>
+    </div>
+
   </div>
   <footer>
     <p>&copy; 2025 Nathan Jenkinson | Sharing Cyber Knowledge with the World</p>
