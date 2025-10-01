@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Wi-Fi 7 Security",
+    "content": "Wi-Fi 7, based on IEEE 802.11be, enhances encryption and throughput for safer, faster networks."
+  },
+  {
+    "title": "Zero Trust",
+    "content": "Zero Trust architecture assumes breach and verifies every access request, reducing lateral movement."
+  },
+  {
+    "title": "TLS 1.3",
+    "content": "TLS 1.3 removes outdated cryptographic algorithms, improving security and performance."
+  }
+]
