@@ -1,14 +1,103 @@
 [
   {
-    "title": "Wi-Fi 7 Security",
-    "content": "Wi-Fi 7, based on IEEE 802.11be, enhances encryption and throughput for safer, faster networks."
+    "title": "EDR vs MDR",
+    "content": "Endpoint Detection and Response (EDR) focuses on local threat detection, while Managed Detection and Response (MDR) adds 24/7 monitoring and expert analysis."
   },
   {
-    "title": "Zero Trust",
-    "content": "Zero Trust architecture assumes breach and verifies every access request, reducing lateral movement."
+    "title": "SOC Tiers",
+    "content": "Security Operations Centers (SOCs) are often structured in tiers: Tier 1 handles triage, Tier 2 investigates, and Tier 3 performs threat hunting and advanced response."
   },
   {
-    "title": "TLS 1.3",
-    "content": "TLS 1.3 removes outdated cryptographic algorithms, improving security and performance."
+    "title": "MITRE ATT&CK",
+    "content": "The MITRE ATT&CK framework maps adversary tactics and techniques, aiding threat detection and incident response."
+  },
+  {
+    "title": "SIEM Function",
+    "content": "Security Information and Event Management (SIEM) systems aggregate logs, detect anomalies, and support compliance reporting."
+  },
+  {
+    "title": "Firewall Rule Logic",
+    "content": "Firewall rules evaluate traffic based on source, destination, port, and protocol, enforcing access control policies."
+  },
+  {
+    "title": "IPsec VPN",
+    "content": "IPsec VPNs secure network traffic using encryption and authentication, commonly used for site-to-site and remote access."
+  },
+  {
+    "title": "Red Teaming",
+    "content": "Red teaming simulates real-world attacks to test defenses, improve detection, and strengthen incident response capabilities."
+  },
+  {
+    "title": "Phishing Indicators",
+    "content": "Common phishing indicators include mismatched URLs, urgent language, unexpected attachments, and spoofed sender addresses."
+  },
+  {
+    "title": "Patch Management",
+    "content": "Patch management ensures timely updates to software and systems, reducing exposure to known vulnerabilities."
+  },
+  {
+    "title": "Least Privilege",
+    "content": "The principle of least privilege restricts user access to only what's necessary, minimizing potential damage from compromise."
+  },
+  {
+    "title": "Ubiquitous Encryption",
+    "content": "Modern security models advocate encrypting data in transit and at rest, even within trusted internal networks."
+  },
+  {
+    "title": "Secure Boot",
+    "content": "Secure Boot ensures that only trusted software is loaded during system startup, protecting against rootkits and firmware tampering."
+  },
+  {
+    "title": "DNS over HTTPS (DoH)",
+    "content": "DoH encrypts DNS queries to prevent eavesdropping and manipulation, enhancing privacy and integrity."
+  },
+  {
+    "title": "Threat Intelligence Feeds",
+    "content": "Threat intelligence feeds provide real-time indicators of compromise (IOCs) and tactics used by threat actors."
+  },
+  {
+    "title": "Hardware Security Modules (HSMs)",
+    "content": "HSMs are physical devices that securely manage cryptographic keys and perform encryption operations."
+  },
+  {
+    "title": "Cloud Shared Responsibility Model",
+    "content": "In cloud environments, providers secure the infrastructure while customers are responsible for data, identity, and access controls."
+  },
+  {
+    "title": "Security Awareness Training",
+    "content": "Regular training helps users recognize phishing, social engineering, and unsafe behaviors, reducing human risk factors."
+  },
+  {
+    "title": "Data Loss Prevention (DLP)",
+    "content": "DLP systems monitor and restrict sensitive data movement to prevent leaks via email, cloud, or removable media."
+  },
+  {
+    "title": "OAuth 2.0",
+    "content": "OAuth 2.0 enables secure delegated access, allowing apps to act on behalf of users without exposing credentials."
+  },
+  {
+    "title": "Security Policy Lifecycle",
+    "content": "Effective security policies require drafting, approval, enforcement, periodic review, and revision to stay relevant."
+  },
+  {
+    "title": "Digital Forensics",
+    "content": "Digital forensics involves collecting, preserving, and analyzing electronic evidence for investigations and legal proceedings."
+  },
+  {
+    "title": "Security Onion",
+    "content": "Security Onion is a free, open-source Linux distro for threat hunting, enterprise security monitoring, and log analysis."
+  },
+  {
+    "title": "Kerberos Authentication",
+    "content": "Kerberos uses tickets and symmetric encryption to authenticate users in a secure, centralized manner."
+  },
+  {
+    "title": "NIST Cybersecurity Framework",
+    "content": "The NIST CSF organizes cybersecurity activities into five functions: Identify, Protect, Detect, Respond, and Recover."
+  },
+  {
+    "title": "Air-Gapped Systems",
+    "content": "Air-gapped systems are physically isolated from networks to prevent remote access and reduce attack surface."
   }
 ]
+
