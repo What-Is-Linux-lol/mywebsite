@@ -44,3 +44,9 @@ try:
     print("✅ Post added to dailyfacts.html")
 except Exception as e:
     print(f"❌ Error writing to dailyfacts.html: {e}")
+
+from subprocess import run
+
+run(["git", "add", "."], shell=True)
+run(["git", "commit", "-m", f"Auto-post for {today}"], shell=True)
+run(["git", "push"], shell=True)
