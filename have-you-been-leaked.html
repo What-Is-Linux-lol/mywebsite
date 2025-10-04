@@ -37,14 +37,17 @@
 }
 
   </style>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
-
-
+<body>
+  <h1>Have You Been Leaked?</h1>
+  <p>Enter your email to check if it has been involved in a data breach.</p>
 
 <form id="hibp-form">
   <label for="email">Check if your email was breached:</label>
   <input type="email" id="email" required />
+  <div class="g-recaptcha" data-sitekey="6Ld3vN0rAAAAAHQj0G6ywyAQBUxmHwmVVSixsxwl"></div>
   <button type="submit">Check</button>
 </form>
 

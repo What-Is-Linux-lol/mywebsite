@@ -21,14 +21,43 @@ function isRateLimited(ip) {
 }
 
 exports.handler = async (event) => {
+  if (event.httpMethod !== "POST") {
+    return { statusCode: 405, body: "Method Not Allowed" };
+  }
+
   const API_KEY = process.env.HIBP_API_KEY;
-  if (!API_KEY) return { statusCode: 500, body: "Server misconfiguration" };
+  const CAPTCHA_SECRET = process.env.RECAPTCHA_SECRET;
+  if (!API_KEY || !CAPTCHA_SECRET) {
+    return { statusCode: 500, body: "Server misconfiguration" };
+  }
 
   const ip = (event.headers["x-forwarded-for"] || event.headers["client-ip"] || "unknown").split(",")[0].trim();
   if (isRateLimited(ip)) return { statusCode: 429, body: "Rate limit exceeded" };
 
-  const email = (event.queryStringParameters?.email || "").trim().toLowerCase();
-  if (!email || !email.includes("@")) return { statusCode: 400, body: "Invalid email" };
+  let email, token;
+  try {
+    const body = JSON.parse(event.body);
+    email = (body.email || "").trim().toLowerCase();
+    token = body.token;
+  } catch {
+    return { statusCode: 400, body: "Invalid request body" };
+  }
+
+  if (!email || !email.includes("@") || !token) {
+    return { statusCode: 400, body: "Missing or invalid email/token" };
+  }
+
+  // Verify CAPTCHA
+  const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `secret=${CAPTCHA_SECRET}&response=${token}`
+  });
+
+  const verifyData = await verifyRes.json();
+  if (!verifyData.success) {
+    return { statusCode: 403, body: "CAPTCHA verification failed" };
+  }
 
   const cacheKey = `breach:${email}`;
   const now = Date.now();
@@ -66,7 +95,7 @@ exports.handler = async (event) => {
     }
 
     return { statusCode: 502, body: "Upstream error" };
-  } catch (err) {
+  } catch {
     return { statusCode: 502, body: "Network error" };
   }
 };
