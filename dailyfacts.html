@@ -1,27 +1,34 @@
  <!DOCTYPE html>
  <head>
     <style>
+      :root {
+       --bg-body: #f5f5f5;
+       --bg-header: #1e1e1e; 
+       --bg-nav: #2c2c2c;
+       --bg-post: #ffffff;
+       --bg-gallery: #fafafa;
+       --bg-footer: #1e1e1e;
+
+       --text-light: #eee;
+       --text-muted: #888;
+       --accent: #ffcc00;
+}
+
+
         .back-arrow {
             font-size: 26px;
             text-align: left;
             color:black;
             font-family: IBM Plex Sans, sans-serif;
         }
-    </style>
-</head>
-
-<body>
-    <div class="back-arrow">
-        <a href="index.html">Back</a>
-    </div>
-</body>
-</html>
-
-
-
-<head>
-    <style>
-        div {
+      hr {
+       border: none;
+       height: 2px;
+       background-color: #ccc;
+       margin: 40px 0;
+      }
+     
+      div {
             font-size: 28px;
             text-align: center;
             color: rgb(39, 41, 39);
@@ -34,10 +41,22 @@
             padding-top: 10px;
             padding-bottom: 10px;
             border-radius: 12px;
-        }
+
+       body {
+        background-color: var(--bg--body);
+       }
+
+       footer {
+        background-color: var(--bg--footer);
+        color: var(--text-light);
+       }
     </style>
 </head>
 
+<body>
+    <div class="back-arrow">
+        <a href="index.html">Back</a>
+    </div>
 
 <div>
 <article class="post" data-aos="fade-up">
@@ -46,8 +65,8 @@
   <p>Modern security models advocate encrypting data in transit and at rest, even within trusted internal networks.</p>
 </article>
 </div>
+ 
 <hr>
-
 
 <div>
 <article class="post" data-aos="fade-up">
@@ -56,9 +75,10 @@
   <p>Security Onion is a free, open-source Linux distro for threat hunting, enterprise security monitoring, and log analysis.</p>
 </article>
 </div>
+ 
 <hr>
 
-</div>
+<div>
 <article class="post" data-aos="fade-up">
   <h2>Digital Forensics</h2>
   <p class="date">Posted on Friday, October 03</p>
@@ -66,3 +86,4 @@
 </article>
 </div>
 <hr>
+</body>
